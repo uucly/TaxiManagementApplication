@@ -8,3 +8,8 @@ fleetApp.config(function($routeProvider) {
 		controller: 'mapController' 
 	})
 });
+
+/*fleetApp.controller('mapController',['$scope', function($scope) {
+	$scope.title = 'Hello';
+	console.log('Hey Ho');
+}]);*/
