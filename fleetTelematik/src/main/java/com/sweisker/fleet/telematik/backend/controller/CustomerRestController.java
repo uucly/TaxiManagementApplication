@@ -40,13 +40,8 @@ public class CustomerRestController {
 	}
 
 	@RequestMapping(value = "/car/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public List<VehicleOrder> getCar(@PathVariable String id) throws JsonProcessingException {
-		return vehicleService.findAll();
-		/*try {
-			return loader.get(id);
-		} catch (ExecutionException e) {
-			e.printStackTrace();
-			return null;
-		}*/
+	public String getCar(@PathVariable String id) throws JsonProcessingException {
+		return new GeoJson().pointFeature(new LatLon(0, 0)).with("name", "nameValue").flush();
+		//return vehicleService.findAll();
 	}
 }
