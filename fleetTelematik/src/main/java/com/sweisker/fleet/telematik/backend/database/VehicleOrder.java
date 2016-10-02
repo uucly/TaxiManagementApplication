@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.vividsolutions.jts.geom.Geometry;
 
 @Entity(name="vehicleorder")
@@ -13,7 +14,7 @@ public class VehicleOrder {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private int id;
 
 	private Date date;
 	
@@ -29,8 +30,10 @@ public class VehicleOrder {
 	
 	private int totalcosts;
 	
+	@JsonRawValue
 	private Geometry source;
 	
+	@JsonRawValue
 	private Geometry target;
 
 	public Geometry getTarget() {
