@@ -1,5 +1,6 @@
 package com.sweisker.fleet.telematik.backend.controller;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.LoadingCache;
 import com.sweisker.fleet.telematik.backend.database.VehicleDeviceService;
+import com.sweisker.fleet.telematik.backend.database.VehicleOrder;
 
 @RestController
 public class CustomerRestController {
@@ -26,9 +28,8 @@ public class CustomerRestController {
 	}
 
 	@RequestMapping(value = "/car/{id}", method = RequestMethod.GET)
-	public String getCar(@PathVariable String id) {
-		System.out.println(vehicleService.findAll());
-		return null;
+	public List<VehicleOrder> getCar(@PathVariable String id) {
+		return vehicleService.findAll();
 		/*try {
 			return loader.get(id);
 		} catch (ExecutionException e) {

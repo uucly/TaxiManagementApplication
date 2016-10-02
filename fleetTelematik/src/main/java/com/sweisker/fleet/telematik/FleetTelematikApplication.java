@@ -10,6 +10,7 @@ public class FleetTelematikApplication {
 	
 	@Autowired
 	private KaGraph graph;
+		
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		SpringApplication.run(FleetTelematikApplication.class, args);
