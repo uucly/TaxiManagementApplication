@@ -1,5 +1,5 @@
-describe("Say hello", function() {
+/*describe("Say hello", function() {
 	it("hello", function() {
 		expect(hello()).toEqual("hello");
 	})
-})
+})*/
