@@ -5,19 +5,19 @@ import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import de.cm.osm2po.routing.DefaultRouter;
+//import de.cm.osm2po.routing.DefaultRouter;
 
 @Component
 public class AStarRouter {
 
-	private final DefaultRouter router;
+	//private final DefaultRouter router;
 	private final Properties params;
 	private final KaGraph graph;
 	
 	@Autowired
 	public AStarRouter(KaGraph graph){
 		this.graph = graph;
-		router = new DefaultRouter();
+		//router = new DefaultRouter();
 		params = new Properties();
 		params.setProperty("findShortestPath", "false");
 		params.setProperty("ignoreRestrictions", "false");
@@ -26,6 +26,7 @@ public class AStarRouter {
 	}
 	
 	public int[] find(int source, int target){
-		return router.findPath(graph, source, target, Float.MAX_VALUE, params);
+		return null;
+		//return router.findPath(graph, source, target, Float.MAX_VALUE, params);
 	}
 }

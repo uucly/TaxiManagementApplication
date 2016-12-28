@@ -7,3 +7,4 @@ fleetTelematik/.project
 fleetTelematik/mvnw
 fleetTelematik/mvnw.cmd
 fleetTelematik/src/main/resources/routeFile/osm_2po.gph
+/target/

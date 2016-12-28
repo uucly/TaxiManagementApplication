@@ -23,8 +23,8 @@ import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 
-import de.cm.osm2po.model.LatLon;
-import de.cm.osm2po.service.GeoJson;
+//import de.cm.osm2po.model.LatLon;
+//import de.cm.osm2po.service.GeoJson;
 
 @RestController
 public class CustomerRestController {
@@ -41,7 +41,8 @@ public class CustomerRestController {
 
 	@RequestMapping(value = "/car/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public String getCar(@PathVariable String id) throws JsonProcessingException {
-		return new GeoJson().pointFeature(new LatLon(0, 0)).with("name", "nameValue").flush();
+		return "Hallo";
+		//return new GeoJson().pointFeature(new LatLon(0, 0)).with("name", "nameValue").flush();
 		//return vehicleService.findAll();
 	}
 }
